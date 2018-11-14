@@ -1,0 +1,21 @@
+<!-- <img src=<%= @url %> style="width:1000px;height:300px"> -->
+
+<%= render 'banner' %>
+
+<div>
+<%= @flat.name %>
+</div>
+<div>
+<%= @flat.address %>
+</div>
+<div>
+<%= @flat.description %>
+</div>
+<div>
+<%= @flat.price_per_night %>
+<%= @flat.number_of_guests %>
+</div>
+<div>
+<%= link_to "Edit flat", edit_flat_path(@flat) %>
+<%= link_to "Back to home", flats_path %>
+</div>

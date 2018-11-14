@@ -10,18 +10,58 @@
 
 .flat {
   width: 250px;
+  height: 200px;
   border: 1px solid lightgray;
   border-radius: 3px;
   padding: 10px;
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+
+}
+
+.flattext {
+  height: 120px;
+}
+
+.flaticons {
+  height: 40px;
+}
+
+.flatlinks {
+  height: 40px;
 }
 
 .header {
+  margin: 50px 0;
   height: 80px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .button {
+  margin: 0 20px;
   background: white;
   border: 1px solid blue;
   text-decoration: none;
   border-radius: 2px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image {
+  flex: 1 1 auto;
+  width: 50vw;
+  height: 30vh;
 }

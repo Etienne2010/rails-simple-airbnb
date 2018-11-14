@@ -1,14 +1,29 @@
+<%= render 'banner' %>
+
 <div class="header">
+  <form action='/index' method='post'>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type='text' name='search'>
+    <input type='submit' value='Search'>
+  </form>
   <%= link_to "Add flat", new_flat_path, class: "button" %>
 </div>
 
 <div class="flats">
   <% @flats.each do |f| %>
   <div class="flat">
-    <%= f.name %>
-    <%= f.address %>
-    <i class="fas fa-euro-sign"></i><%= f.price_per_night %>
-    <i class="fas fa-user-alt"></i><%= f.number_of_guests %>
+    <div class="flattext">
+      <h3><%= f.name %></h3>
+      <h4><%= f.address %></h4>
+    </div>
+    <div class="flaticons">
+      <i class="fas fa-euro-sign"></i><%= f.price_per_night %>
+      <i class="fas fa-user-alt"></i><%= f.number_of_guests %>
+    </div>
+    <div class="flatlinks">
+      <%= link_to "More info", flat_path(f) %>
+      <%= link_to "Delete", flat_path(f), method: :delete, data: { confirm: "Are you sure?"} %>
+    </div>
   </div>
   <% end %>
 </div>
