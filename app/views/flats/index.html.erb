@@ -1,0 +1,14 @@
+<div class="header">
+  <%= link_to "Add flat", new_flat_path, class: "button" %>
+</div>
+
+<div class="flats">
+  <% @flats.each do |f| %>
+  <div class="flat">
+    <%= f.name %>
+    <%= f.address %>
+    <i class="fas fa-euro-sign"></i><%= f.price_per_night %>
+    <i class="fas fa-user-alt"></i><%= f.number_of_guests %>
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,27 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.flats {
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flat {
+  width: 250px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.header {
+  height: 80px;
+}
+
+.button {
+  background: white;
+  border: 1px solid blue;
+  text-decoration: none;
+  border-radius: 2px;
+}
